@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import initTelegramNavigation from "./return2Telegram"; // Add this import
+import { initTelegramNavigation } from "./return2Telegram";
 
 export default function Puzzle15() {
   // Game state
@@ -11,15 +11,14 @@ export default function Puzzle15() {
   const [lastClicked, setLastClicked] = useState(null);
   const [showClickEffect, setShowClickEffect] = useState(false);
 
-  // Initialize board on first render
-  useEffect(() => {
-    initBoard();
-  }, []);
-
-  // Just back arrow navigation
   useEffect(() => {
     const cleanup = initTelegramNavigation();
     return cleanup;
+  }, []);
+
+  // Initialize board on first render
+  useEffect(() => {
+    initBoard();
   }, []);
 
   // Function to create a new shuffled board
