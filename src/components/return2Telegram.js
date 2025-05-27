@@ -68,3 +68,5 @@ export const TelegramNavUtils = {
     }
   },
 };
+
+export default initTelegramNavigation;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { initTelegramNavigation } from "./return2Telegram"; // Add this import
+import initTelegramNavigation from "./return2Telegram"; // Add this import
 
 export default function Puzzle15() {
   // Game state
